@@ -31,15 +31,15 @@ namespace Blog.Controllers
             return View();
         }
 
-        [HttpPost] //hämtar från vyn till controllern
-        public IActionResult Create(Blog blog)
+        [HttpPost] //hämtar från vyn till controllern 
+        public IActionResult Create(Models.Blog blog)
         {
             
             //var blogs = context.Blogs.OrderBy(x => x.TimeStamp).Include(c => c.Category).Include(u => u.User).Take(10).FirstOrDefault();
             context.Blogs.Add(blog);
             
 
-            return View(blog);
+            return View("Index");
         }
 
 

@@ -20,8 +20,10 @@ namespace Blog.Models
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Category>().HasData(
-                new Category { CategoryId = "P", CategoryName = "C Sharp"},
-                new Category { CategoryId = "E", CategoryName = "Java"}
+                new Category { CategoryId = "P", CategoryName = "Politics" },
+                new Category { CategoryId = "E", CategoryName = "Economy" },
+                new Category { CategoryId = "W", CategoryName = "Weather" },
+                new Category { CategoryId = "S", CategoryName = "Sports" }
                 );
 
             modelBuilder.Entity<User>().HasData(
@@ -34,33 +36,33 @@ namespace Blog.Models
                 new Blog
                 {
                     BlogId = 1,
-                    BlogPost = "Älskar att koda i C sharp ... ",
+                    BlogPost = "Senaste nytt från Ekot ",
                     TimeStamp = "2020-06-01",
-                    CategoryId = "C",
+                    CategoryId = "P",
                     UserId = 2
                 },
                 new Blog
                 {
                     BlogId = 2,
-                    BlogPost = "Älskar att koda i Java ... ",
+                    BlogPost = "TT nyheter i sammanfattning ... ",
                     TimeStamp = "2020-06-02",
-                    CategoryId = "J",
+                    CategoryId = "P",
                     UserId = 2
                 },
                 new Blog
                 {
                     BlogId = 3,
-                    BlogPost = "Tycker inte om att koda i C sharp ... ",
+                    BlogPost = "Änglarna gjorde mål på Sankte Pär i Pärleporten ... ",
                     TimeStamp = "2020-06-03",
-                    CategoryId = "C",
+                    CategoryId = "S",
                     UserId = 1
                 },
                 new Blog
                 {
                     BlogId = 4,
-                    BlogPost = "Tycker inte om att koda i Java ... men gillar Java kaffe ",
+                    BlogPost = "Vädret mycket regn, åska och det blåser smådj_vlar",
                     TimeStamp = "2020-06-04",
-                    CategoryId = "J",
+                    CategoryId = "W",
                     UserId = 3
                 }
                 );
