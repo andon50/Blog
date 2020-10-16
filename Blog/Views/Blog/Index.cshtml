@@ -1,11 +1,10 @@
 ﻿@model List<Blog>
 @{
-    ViewBag.Title = "BlogList";
+    ViewData["Title"] = "Index";
 }
 
+<h1>BlogList</h1>
 
-
-@*<a asp-controller="Blog" asp-action="Add">Add new Post</a>*@
 <table class="table table-bordered">
     <thead>
         <tr>
@@ -13,20 +12,18 @@
             <th>BlogPost</th>
             <th>Category</th>
             <th>DateTime</th>
-            <th></th>
         </tr>
     </thead>
     <tbody>
         @foreach (var blog in Model)
         {
-        <tr>
-            <td>@blog.User</td>
-            <td>@blog.BlogPost</td>
-            <td>@blog.Category</td>
-            <td>@blog.GetDateTime</td>
-            <td></td>
-        </tr>
+            <tr>
+                <td>@blog.User.UserName</td>
+                <td>@blog.BlogPost</td>
+                <td>@blog.Category.CategoryName</td>
+                <td>@blog.TimeStamp</td>
+            </tr>
         }
     </tbody>
-
 </table>
+

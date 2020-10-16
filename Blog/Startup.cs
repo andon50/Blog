@@ -26,6 +26,7 @@ namespace Blog
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
             services.AddDbContext<BlogContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("BlogContext")));
         }

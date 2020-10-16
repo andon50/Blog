@@ -20,8 +20,8 @@ namespace Blog.Models
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Category>().HasData(
-                new Category { CategoryId = "C", CategoryName = "C Sharp"},
-                new Category { CategoryId = "J", CategoryName = "Java"}
+                new Category { CategoryId = "P", CategoryName = "C Sharp"},
+                new Category { CategoryId = "E", CategoryName = "Java"}
                 );
 
             modelBuilder.Entity<User>().HasData(
@@ -35,7 +35,7 @@ namespace Blog.Models
                 {
                     BlogId = 1,
                     BlogPost = "Älskar att koda i C sharp ... ",
-                    GetDateTime = "2020-06-01",
+                    TimeStamp = "2020-06-01",
                     CategoryId = "C",
                     UserId = 2
                 },
@@ -43,7 +43,7 @@ namespace Blog.Models
                 {
                     BlogId = 2,
                     BlogPost = "Älskar att koda i Java ... ",
-                    GetDateTime = "2020-06-02",
+                    TimeStamp = "2020-06-02",
                     CategoryId = "J",
                     UserId = 2
                 },
@@ -51,7 +51,7 @@ namespace Blog.Models
                 {
                     BlogId = 3,
                     BlogPost = "Tycker inte om att koda i C sharp ... ",
-                    GetDateTime = "2020-06-03",
+                    TimeStamp = "2020-06-03",
                     CategoryId = "C",
                     UserId = 1
                 },
@@ -59,7 +59,7 @@ namespace Blog.Models
                 {
                     BlogId = 4,
                     BlogPost = "Tycker inte om att koda i Java ... men gillar Java kaffe ",
-                    GetDateTime = "2020-06-04",
+                    TimeStamp = "2020-06-04",
                     CategoryId = "J",
                     UserId = 3
                 }

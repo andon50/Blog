@@ -12,13 +12,12 @@ namespace Blog.Models
         public int BlogId { get; set; }
 
         [Required(ErrorMessage = "Please enter message")]
-        [Range(1,100,ErrorMessage = "Maximum number (100) of letters exceeded")]
+        //[Range(1,100,ErrorMessage = "Maximum number (100) of letters exceeded")]
         public string BlogPost { get; set; }
         
-        public string GetDateTime { get; set; }
+        public string TimeStamp { get; set; }
 
 
-        [Required(ErrorMessage = "Please select Category")]
         public string CategoryId { get; set; }
         public Category Category { get; set; }
 

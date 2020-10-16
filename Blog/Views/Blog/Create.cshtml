@@ -1,0 +1,26 @@
+﻿@model Blog
+@{
+    ViewData["Title"] = "Create";
+    //ViewBag.Title = "Create";
+}
+
+
+<h1>Add blog</h1>
+
+
+<form method="post">
+    <p>
+        <label>BlogPost</label>
+        <input asp-for="@Model.BlogPost" />
+    </p>
+    <p>
+        <label>Category</label>
+        <select asp-for="@Model.CategoryId">
+            <option value="P">Politics</option>
+            <option value="E">Economy</option>
+            <option value="W">Weather</option>
+            <option value="S">Sports</option>
+        </select>
+    </p>
+    <p><button type="submit">Submit</button></p>
+</form>
