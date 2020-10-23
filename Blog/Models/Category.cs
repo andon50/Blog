@@ -11,7 +11,7 @@ namespace Blog.Models
         [Key]
         public string CategoryId { get; set; }
 
-        [Required(ErrorMessage = "Please enter Category")]
+        //[Required(ErrorMessage = "Please enter Category")]
         public string CategoryName { get; set; }
 
 

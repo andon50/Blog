@@ -11,7 +11,7 @@ namespace Blog.Models
         [Key]
         public int UserId { get; set; }
 
-        [Required(ErrorMessage = "Please enter UserName")]
+       // [Required(ErrorMessage = "Please enter UserName")]
         public string UserName { get; set; }
     }
 }

@@ -1,0 +1,26 @@
+﻿@model Blog
+@{
+    ViewData["Title"] = "Msg";
+}
+
+<h1>Message sent</h1>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>UserName</th>
+            <th>BlogPost</th>
+            <th>Category</th>
+            <th>DateTime</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@Model.User.UserName</td>
+            <td>@Model.BlogPost</td>
+            <td>@Model.Category.CategoryName</td>
+            <td>@Model.TimeStamp</td>
+        </tr>
+    </tbody>
+</table>
+

@@ -1,14 +1,21 @@
 ﻿@model Blog
 @{
     ViewData["Title"] = "Create";
-    //ViewBag.Title = "Create";
+   // ViewBag.Title = "Create";
 }
-
 
 <h1>Add blog</h1>
 
-
 <form method="post">
+    <p>
+
+        <label>Published by: @*@Model.User*@ </label>
+    <select asp-for="@Model.UserId">
+        <option value="1">Admin_1</option>
+        <option value="2">Admin_2</option>
+        <option value="3">Admin_3</option>
+    </select>
+    </p>
     <p>
         <label>BlogPost</label>
         <input asp-for="@Model.BlogPost" />

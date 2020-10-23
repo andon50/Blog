@@ -34,17 +34,17 @@ namespace Blog.Controllers
         [HttpPost] //hämtar från vyn till controllern 
         public IActionResult Create(Models.Blog blog)
         {
-            
-            //var blogs = context.Blogs.OrderBy(x => x.TimeStamp).Include(c => c.Category).Include(u => u.User).Take(10).FirstOrDefault();
-            context.Blogs.Add(blog);
-            
+            var _blog = new Models.Blog();
+            _blog.UserId = blog.UserId;
+            _blog.BlogPost = blog.BlogPost;
+            _blog.CategoryId = blog.CategoryId;
+            _blog.TimeStamp = DateTime.Now.ToString("yyyy/MM/dd H:mm");
+
+            context.Blogs.Add(_blog);
+            context.SaveChanges();
 
             return View("Index");
         }
 
-
-
-
-        //var blogs = context.Blogs.OrderBy(x => x.Created).Include(c => c.Category).Include(u => u.User).Take(10).FirstOrDefault();
     }
 }
