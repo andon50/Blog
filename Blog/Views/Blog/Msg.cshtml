@@ -3,24 +3,28 @@
     ViewData["Title"] = "Msg";
 }
 
-<h1>Message sent</h1>
+<h2>Message sent</h2>
+<a href="Index">Return to BlogList</a>
+<br />
+<br />
 
-<table class="table table-bordered">
-    <thead>
-        <tr>
-            <th>UserName</th>
-            <th>BlogPost</th>
-            <th>Category</th>
-            <th>DateTime</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>@Model.User.UserName</td>
-            <td>@Model.BlogPost</td>
-            <td>@Model.Category.CategoryName</td>
-            <td>@Model.TimeStamp</td>
-        </tr>
-    </tbody>
-</table>
+<p>@Model.BlogPost</p>
 
+@*<table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>UserName</th>
+                <th>Category</th>
+                <th>BlogPost</th>
+                <th>DateTime</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@Model.User.UserName</td>
+                <td>@Model.CategoryId</td>
+                <td>@Model.BlogPost</td>
+                <td>@Model.TimeStamp</td>
+            </tr>
+        </tbody>
+    </table>*@

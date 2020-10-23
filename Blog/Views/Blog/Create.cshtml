@@ -1,24 +1,22 @@
 ﻿@model Blog
 @{
     ViewData["Title"] = "Create";
-   // ViewBag.Title = "Create";
+    // ViewBag.Title = "Create";
 }
 
-<h1>Add blog</h1>
+<h2>Add blog</h2>
+<a href="Index">Return to BlogList</a>
+<br />
+<br />
 
 <form method="post">
     <p>
-
         <label>Published by: @*@Model.User*@ </label>
-    <select asp-for="@Model.UserId">
-        <option value="1">Admin_1</option>
-        <option value="2">Admin_2</option>
-        <option value="3">Admin_3</option>
-    </select>
-    </p>
-    <p>
-        <label>BlogPost</label>
-        <input asp-for="@Model.BlogPost" />
+        <select asp-for="@Model.UserId">
+            <option value="1">Admin_1</option>
+            <option value="2">Admin_2</option>
+            <option value="3">Admin_3</option>
+        </select>
     </p>
     <p>
         <label>Category</label>
@@ -28,6 +26,10 @@
             <option value="W">Weather</option>
             <option value="S">Sports</option>
         </select>
+    </p>
+    <p>
+        <label>BlogPost</label>
+        <input asp-for="@Model.BlogPost" />
     </p>
     <p><button type="submit">Submit</button></p>
 </form>
